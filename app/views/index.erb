@@ -1,25 +1,11 @@
 <div class="container">
-  <h1>Welcome to Kitly - your number 1 URL Shortener!</h1>
+  <h1>Race it!</h1>
+  <h2>The ultimate racing game</h2>
+  <p>Enter player names:</p>
 
-  <form action="/urls" method="post">
-    Your URL: <input type ="text" name="long_url"></br>
-    <input type="submit" value="Submit"></br>
+  <form action="/game" method="post">
+      <input type="text" placeholder ="Player 1" name="p1">
+      <input type="text" placeholder ="Player 2" name="p2">
+    <input type="submit" value="Play!"><br><br>
   </form>
 </div>
-
-
-<table>
-  <%Url.all.each do |u|%>
-  <tr>
-    <td>
-      <a href ="/<%= u.kitly %>">http:kitly/<%=u.kitly%>
-      </a>
-    </td>
-    <td>
-      <%=u.count%>
-    </td>
-        <%end%>
-  </tr>
-</table>
-
-
